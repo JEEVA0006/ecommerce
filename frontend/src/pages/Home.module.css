@@ -1,0 +1,61 @@
+.hero {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 60%, #7c3aed 100%);
+  color: #fff;
+  padding: 5rem 1rem;
+}
+.heroContent { max-width: 600px; }
+.heroTitle {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.heroTitle span { color: #fcd34d; }
+.heroSub { font-size: 1.1rem; opacity: .9; margin-bottom: 1.75rem; }
+.heroBtn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .75rem 1.75rem; border-radius: var(--radius);
+  background: #fff; color: var(--primary);
+  font-weight: 700; font-size: 1rem;
+  transition: transform .15s, box-shadow .15s;
+}
+.heroBtn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.2); }
+
+.section { padding: 3rem 0; }
+.sectionHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+.sectionTitle { font-size: 1.5rem; font-weight: 700; }
+.viewAll {
+  display: flex; align-items: center; gap: .25rem;
+  font-size: .9rem; color: var(--primary); font-weight: 600;
+}
+
+.catGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: .75rem;
+}
+.catCard {
+  padding: .9rem 1rem;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center; font-size: .9rem; font-weight: 600;
+  color: var(--text);
+  transition: background .15s, color .15s, border-color .15s;
+}
+.catCard:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.trust { background: var(--surface); border-top: 1px solid var(--border); padding: 3rem 0; }
+.trustGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+.trustItem { display: flex; flex-direction: column; align-items: center; text-align: center; gap: .5rem; }
+.trustItem h3 { font-weight: 700; }
+.trustItem p { font-size: .875rem; color: var(--muted); }

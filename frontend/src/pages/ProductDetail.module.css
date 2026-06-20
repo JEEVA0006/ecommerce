@@ -1,0 +1,57 @@
+.back {
+  display: inline-flex; align-items: center; gap: .35rem;
+  background: none; border: none; color: var(--muted);
+  font-size: .9rem; margin-bottom: 1.5rem;
+  transition: color .15s;
+}
+.back:hover { color: var(--primary); }
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem; align-items: start;
+}
+@media (max-width: 720px) { .layout { grid-template-columns: 1fr; gap: 1.5rem; } }
+.imgWrap {
+  border-radius: var(--radius); overflow: hidden;
+  border: 1px solid var(--border);
+}
+.img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.info { display: flex; flex-direction: column; gap: .75rem; }
+.category {
+  font-size: .75rem; font-weight: 700; text-transform: uppercase;
+  color: var(--primary); letter-spacing: .06em;
+}
+.name { font-size: 1.75rem; font-weight: 700; }
+.price { font-size: 2rem; font-weight: 800; color: var(--primary); }
+.desc { color: var(--muted); line-height: 1.7; }
+.stockRow {
+  display: flex; align-items: center; gap: .4rem;
+  font-size: .9rem; color: var(--muted);
+}
+.inStock { color: var(--success); font-weight: 600; }
+.outStock { color: var(--danger); font-weight: 600; }
+.qtyRow { display: flex; align-items: center; gap: .75rem; }
+.qtyLabel { font-size: .9rem; font-weight: 600; }
+.qtyControl {
+  display: flex; align-items: center; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
+}
+.qtyControl button {
+  padding: .4rem .85rem; background: var(--bg); border: none;
+  font-size: 1.1rem; transition: background .15s;
+}
+.qtyControl button:hover { background: var(--border); }
+.qtyControl input {
+  width: 52px; text-align: center; border: none; border-left: 1px solid var(--border); border-right: 1px solid var(--border);
+  padding: .4rem .25rem; outline: none; -moz-appearance: textfield;
+}
+.qtyControl input::-webkit-outer-spin-button, .qtyControl input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.addBtn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  padding: .85rem 2rem; border-radius: var(--radius);
+  background: var(--primary); color: #fff; border: none;
+  font-size: 1rem; font-weight: 700;
+  transition: background .15s;
+  margin-top: .5rem;
+}
+.addBtn:hover:not(:disabled) { background: var(--primary-dark); }
+.addBtn:disabled { background: #cbd5e1; cursor: not-allowed; }

@@ -1,0 +1,49 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --secondary: #f59e0b;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --text: #1e293b;
+  --muted: #64748b;
+  --radius: 10px;
+  --shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; font: inherit; }
+input, select, textarea { font: inherit; }
+
+/* Utility classes */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+.badge {
+  display: inline-flex; align-items: center; gap: .25rem;
+  padding: .2rem .6rem; border-radius: 9999px; font-size: .75rem; font-weight: 600;
+}
+.badge-pending   { background:#fef3c7; color:#92400e; }
+.badge-processing{ background:#dbeafe; color:#1e40af; }
+.badge-shipped   { background:#ede9fe; color:#5b21b6; }
+.badge-delivered { background:#dcfce7; color:#166534; }
+.badge-cancelled { background:#fee2e2; color:#991b1b; }
+.badge-paid      { background:#dcfce7; color:#166534; }
+.badge-unpaid    { background:#fee2e2; color:#991b1b; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
