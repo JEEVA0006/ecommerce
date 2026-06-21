@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'ecommerce-pi-nine-93.vercel.app'],
+  origin: ['http://localhost:5173', 'https://ecommerce-jeeva4.vercel.app'],
   credentials: true
 }));
 app.use(express.json());
