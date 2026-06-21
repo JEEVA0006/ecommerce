@@ -78,15 +78,7 @@ export default function LoginPage() {
           <Link to="/register" className={styles.switchLink}>Create one</Link>
         </p>
 
-        <div className={styles.demo}>
-          <p className={styles.demoTitle}>Demo accounts</p>
-          <button className={styles.demoBtn} onClick={() => setForm({ email: 'admin@shop.com', password: 'admin123' })}>
-            Fill Admin credentials
-          </button>
-          <button className={styles.demoBtn} onClick={() => setForm({ email: 'user@shop.com', password: 'user123' })}>
-            Fill User credentials
-          </button>
-        </div>
+        
       </div>
     </div>
   )
